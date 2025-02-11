@@ -1,7 +1,7 @@
 name: MC Bot Auto Run
 on:
   schedule:
-    - cron: "*/10 * * * *"  # Her 10 dakikada bir çalıştır
+    - cron: "*/2 * * * *"  # Her 10 dakikada bir çalıştır
 jobs:
   run-bot:
     runs-on: ubuntu-latest
