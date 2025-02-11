@@ -1,0 +1,16 @@
+name: MC Bot Auto Run
+on:
+  schedule:
+    - cron: "*/10 * * * *"  # Her 10 dakikada bir çalıştır
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kodu İndir
+        uses: actions/checkout@v3
+      - name: Node.js Kur
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16  # Node.js versiyonunu buradan değiştirebilirsin
+      - name: Botu Başlat
+        run: node bot.js  # Eğer bot.js ile yazdıysan
